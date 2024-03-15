@@ -25,35 +25,11 @@ public class KafkaProducerService implements SchedulingConfigurer {
     @Override
     public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
         taskRegistrar.setScheduler(taskExecutor());
-        taskRegistrar.addCronTask(this::collectDataFromCovidAPI, "0 0/30 * * * *");
     }
 
     @Bean(destroyMethod="shutdown")
     public Executor taskExecutor() {
         return Executors.newScheduledThreadPool(1);
-    }
-
-    private void collectDataFromCovidAPI() {
-
-        try {
-
-
-            OkHttpClient client = new OkHttpClient().newBuilder().build();
-
-            Request request = new Request.Builder()
-                    .url("https://api.covid19api.com/summary")
-                    .method("GET", null)
-                    .build();
-
-            try {
-                Response response = client.newCall(request).execute();
-                String data = response.body() != null ? response.body().string() : "";
-                sendMessage(data);
-            } catch (Exception e) { e.printStackTrace(); }
-
-        } catch (Exception e) { System.err.println("Error while fetching API"); }
-
-
     }
 
     public void sendMessage(String message) {

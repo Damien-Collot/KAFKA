@@ -1,0 +1,63 @@
+package com.example.kafkaBDD.model;
+
+import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlAccessType;
+import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.io.Serializable;
+import java.util.Date;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@XmlRootElement(name = "countries")
+@XmlAccessorType(XmlAccessType.FIELD)
+@Entity
+@Table(name = "Countries")
+public class Countries implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "id")
+    @XmlElement
+    private Integer id;
+    @Column(name = "country")
+    @XmlElement
+    private String country;
+    @Column(name = "country_code")
+    @XmlElement
+    private String countryCode;
+    @Column(name = "slug")
+    @XmlElement
+    private String slug;
+    @Column(name = "new_confirmed")
+    @XmlElement
+    private Integer newConfirmed;
+    @Column(name = "total_confirmed")
+    @XmlElement
+    private Integer totalConfirmed;
+    @Column(name = "new_deaths")
+    @XmlElement
+    private Integer newDeaths;
+    @Column(name = "totalDeaths")
+    @XmlElement
+    private Integer totalDeaths;
+    @Column(name = "new_recovered")
+    @XmlElement
+    private Integer newRecovered;
+    @Column(name = "total_recovered")
+    @XmlElement
+    private Integer totalRecovered;
+    @Column(name = "date_maj")
+    @XmlElement
+    private Date dateMaj;
+
+}

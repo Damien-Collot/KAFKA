@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+    // Dépendance pour le client Kafka
+    implementation 'org.apache.kafka:kafka-clients:3.0.0'
+    // Dépendance pour le pilote JDBC PostgreSQL
+    implementation 'org.postgresql:postgresql:42.2.19'
+}
+
+test {
+    useJUnitPlatform()
+}

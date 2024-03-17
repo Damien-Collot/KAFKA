@@ -1,0 +1,9 @@
+INFO  2024-03-15 15:07:01.307 [Main Server Thread] com.mirth.connect.server.Mirth: Mirth Connect 4.5.0 (Built on January 17, 2024) server successfully started.
+INFO  2024-03-15 15:07:01.383 [Main Server Thread] com.mirth.connect.server.Mirth: This product was developed by NextGen Healthcare (https://www.nextgen.com) and its contributors (c)2005-2024.
+INFO  2024-03-15 15:07:01.383 [Main Server Thread] com.mirth.connect.server.Mirth: Running OpenJDK 64-Bit Server VM 17.0.10 on Linux (5.15.133.1-microsoft-standard-WSL2, amd64), postgres, with charset UTF-8.
+INFO  2024-03-15 15:07:01.392 [Main Server Thread] com.mirth.connect.server.Mirth: Web server running at http://172.21.0.3:8080/ and https://172.21.0.3:8443/
+INFO  2024-03-15 15:23:42.084 [Shutdown Hook Thread] com.mirth.connect.server.Mirth: shutting down mirth due to normal request
+INFO  2024-03-15 15:24:14.533 [Main Server Thread] com.mirth.connect.server.Mirth: Mirth Connect 4.5.0 (Built on January 17, 2024) server successfully started.
+INFO  2024-03-15 15:24:14.542 [Main Server Thread] com.mirth.connect.server.Mirth: This product was developed by NextGen Healthcare (https://www.nextgen.com) and its contributors (c)2005-2024.
+INFO  2024-03-15 15:24:14.543 [Main Server Thread] com.mirth.connect.server.Mirth: Running OpenJDK 64-Bit Server VM 17.0.10 on Linux (5.15.133.1-microsoft-standard-WSL2, amd64), postgres, with charset UTF-8.
+INFO  2024-03-15 15:24:14.544 [Main Server Thread] com.mirth.connect.server.Mirth: Web server running at http://172.21.0.3:8080/ and https://172.21.0.3:8443/
